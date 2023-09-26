@@ -36,7 +36,7 @@ select{
       if (event.target.value === "paris") {
         alert("Bonjour!");
       }
-      if (event.target.value === "tokyo") {
+      if (event.target.value === "toky") {
         alert("Ciao!");
       }
       if (event.target.value === "sydney") {
@@ -47,5 +47,16 @@ select{
 
   let countriesSelect = document.querySelector("#countries");
   countriesSelect.addEventListener("change", showSelectedCountry);
+
+function showCountry (event){
+  let tokyoTime = moment()
+        .tz("Asia/Tokyo")
+        .format("dddd, MMMM D, YYYY h:m A");
+
+      let tokyoElement = document.querySelector("#tokyo");
+      tokyoElement.addEventListener("change", showCountry);
+
+      tokyoElement.innerHTML = tokyoTime;
+}
 </script>
 </html>
