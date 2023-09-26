@@ -5,15 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time🕛Zone</title>
+    <style>
+
+select{
+  display: block;
+  padding: 40px;
+  height: 25px;
+  margin: 20px;
+  border-radius: 10px;
+  min-width: 150px;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+    </style>
+    
 </head>
 <body>
     <select id="countries">
       <option value="">Select a country</option>
-      <option value="paris">Paris </option>
-      <option value="tokyo">Tokyo</option>
-      <option value="sydney">Sydney</option>
+      <option value="paris">Paris 🍷</option>
+      <option value="tokyo">Tokyo 🍣</option>
+      <option value="sydney">Sydney 🦘</option>
     </select>
-
-</form>
 </body>
+<script>
+  function showSelectedCountry(event) {
+    if (event.target.value.length > 0) {
+      if (event.target.value === "france") {
+        alert("Bonjour!");
+      }
+      if (event.target.value === "italy") {
+        alert("Ciao!");
+      }
+      if (event.target.value === "usa") {
+        alert("Hi!");
+      }
+    }
+  }
+
+  let countriesSelect = document.querySelector("#countries");
+  countriesSelect.addEventListener("change", showSelectedCountry);
+</script>
 </html>
