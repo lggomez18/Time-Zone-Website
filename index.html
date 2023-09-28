@@ -23,45 +23,69 @@ select{
     
 </head>
 <body>
-    <select id="countries">
+    <select id="city">
       <option value="">Select a country</option>
-      <option value="paris">Paris 🍷</option>
-      <div id="date"><option value="tokyo">Tokyo 🍣</option></div> 
-      <option value="sydney">Sydney 🦘</option>
+      <option value="Europe/Paris">Paris 🍷</option>
+      <option value="Asia/Tokyo">Tokyo 🍣</option> 
+      <option value="Australia/Sydney">Sydney 🦘</option>
     </select>
+
+<footer>Coded by Leticia Gmx / Github open source <a href=""></a></footer>
 </body>
 <script>
-  function showSelectedCountry(event) {
+  function showSelectedCity(event) {
     if (event.target.value.length > 0) {
-      if (event.target.value === "paris") {
+      if (event.target.value === "Europe/Paris") {
         alert("Bonjour!");
       }
-      if (event.target.value === "tokyo") {
+      if (event.target.value === "Asia/Tokyo") {
+        alert("Ciao!");
 
       }
-      if (event.target.value === "sydney") {
+      if (event.target.value === "Australia/Sydney") {
         alert("Hi!");
       }
     }
-  }
+  };
 
-  let countriesSelect = document.querySelector("#countries");
-  countriesSelect.addEventListener("change", showSelectedCountry);
+  
+  let citySelectElement = document.querySelector("#city");
+  citySelectElement.addEventListener("change", showSelectedCity);
 
-  function displayDate (){
-    let date = document.querySelector("#date");
-    date.innerHTML= new Date ();
-  }
-  //function showCountry (event){
-  //let tokyoTime = moment()
-        //.tz("Asia/Tokyo")
-        //.format("dddd, MMMM D, YYYY h:m A");
 
-      //let tokyoElement = document.querySelector("#tokyo");
-      //tokyoElement.addEventListener("change", showCountry);
 
-      //tokyoElement.innerHTML = tokyoTime;
-};
+  let tokyoTime = moment()
+  .tz("Asia/Tokyo")
+  .format("dddd, MMMM D, YYYY h:m A");
+  
+  let parisTime = moment()
+  .tz ("Europe/Paris")
+  .format("dddd, MMMM D, YYYY h:m A");
+
+  let sydneyTime = moment()
+  .tz ("Australia/Sydney")
+  .format("dddd, MMMM D, YYYY h:m A");
+
+
+      let tokyoElement = document.querySelector("#Asia/Tokyo");
+      tokyoElement.innerHTML=tokyoTime;
+      //tokyoElement.addEventListener("change", displayDate);
+
+      let parisElement = document.querySelector("#Europe/Paris");
+      parisElement.innerHTML=parisTime;
+
+
+      let sydneyElement = document.querySelector("#Australia/Sydney");
+      sydneyElement.innerHTML=sydneyTime;
+
+
+      let localTimezone = moment.tz.guess();
+      let localElement = document.querySelector("#local");
+      localElement.innerHTML = `Your current time zone is ${localTimezone} and the current time is ${moment().format(
+        "h:m A"
+      )}`;
+
+
 
 
 
