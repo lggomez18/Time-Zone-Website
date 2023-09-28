@@ -39,7 +39,7 @@ select{
         alert("Bonjour!");
       }
       if (event.target.value === "Asia/Tokyo") {
-        alert("Ciao!");
+        alert(displayDate);
 
       }
       if (event.target.value === "Australia/Sydney") {
@@ -53,7 +53,7 @@ select{
   citySelectElement.addEventListener("change", showSelectedCity);
 
 
-
+function displayDate (){
   let tokyoTime = moment()
   .tz("Asia/Tokyo")
   .format("dddd, MMMM D, YYYY h:m A");
@@ -68,8 +68,8 @@ select{
 
 
       let tokyoElement = document.querySelector("#Asia/Tokyo");
-      tokyoElement.innerHTML=tokyoTime;
-      //tokyoElement.addEventListener("change", displayDate);
+      tokyoElement.innerHTML=event.target.value;
+      tokyoElement.addEventListener("change", displayDate);
 
       let parisElement = document.querySelector("#Europe/Paris");
       parisElement.innerHTML=parisTime;
@@ -87,7 +87,7 @@ select{
 
 
 
-
+    }
 
 
 </script>
