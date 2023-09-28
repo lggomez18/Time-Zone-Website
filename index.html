@@ -26,7 +26,7 @@ select{
     <select id="countries">
       <option value="">Select a country</option>
       <option value="paris">Paris 🍷</option>
-      <option value="tokyo">Tokyo 🍣</option>
+      <div id="date"><option value="tokyo">Tokyo 🍣</option></div> 
       <option value="sydney">Sydney 🦘</option>
     </select>
 </body>
@@ -37,7 +37,7 @@ select{
         alert("Bonjour!");
       }
       if (event.target.value === "tokyo") {
-        alert(showCountry);
+
       }
       if (event.target.value === "sydney") {
         alert("Hi!");
@@ -48,16 +48,23 @@ select{
   let countriesSelect = document.querySelector("#countries");
   countriesSelect.addEventListener("change", showSelectedCountry);
 
-  function showCountry (event){
-  let tokyoTime = moment()
-        .tz("Asia/Tokyo")
-        .format("dddd, MMMM D, YYYY h:m A");
+  function displayDate (){
+    let date = document.querySelector("#date");
+    date.innerHTML= new Date ();
+  }
+  //function showCountry (event){
+  //let tokyoTime = moment()
+        //.tz("Asia/Tokyo")
+        //.format("dddd, MMMM D, YYYY h:m A");
 
-      let tokyoElement = document.querySelector("#tokyo");
-      tokyoElement.addEventListener("change", showCountry);
+      //let tokyoElement = document.querySelector("#tokyo");
+      //tokyoElement.addEventListener("change", showCountry);
 
       //tokyoElement.innerHTML = tokyoTime;
 };
+
+
+
 
 </script>
 </html>
