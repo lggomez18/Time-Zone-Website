@@ -35,59 +35,37 @@ select{
 <script>
   function showSelectedCity(event) {
     if (event.target.value.length > 0) {
-      if (event.target.value === "Europe/Paris") {
-        alert("Bonjour!");
+      let currentTime=moment()
+      .tz (event.target.value)
+      .format("dddd, MMMM D, YYYY h:mm A");
+
+      alert (`It is ${currentTime} in ${event.target.value}`);
       }
+
+      
       if (event.target.value === "Asia/Tokyo") {
-        alert(displayDate);
-
+      alert (`It is ${tokyoTime} in ${event.target.value}`);
       }
+
       if (event.target.value === "Australia/Sydney") {
-        alert("Hi!");
+      alert (`It is ${sydneyTime} in ${event.target.value}`);
       }
     }
-  };
+  ;
 
   
-  let citySelectElement = document.querySelector("#city");
-  citySelectElement.addEventListener("change", showSelectedCity);
-
-
-function displayDate (){
-  let tokyoTime = moment()
-  .tz("Asia/Tokyo")
-  .format("dddd, MMMM D, YYYY h:m A");
+ 
+  let format = "dddd, MMMM Do, YYYY h:mm A";
+  let tokyoTime = moment.tz("Asia/Tokyo").format("dddd, MMMM D, YYYY h:m A");
   
-  let parisTime = moment()
-  .tz ("Europe/Paris")
-  .format("dddd, MMMM D, YYYY h:m A");
+  let parisTime = moment.tz ("Europe/Paris").format("dddd, MMMM D, YYYY h:m A");
 
-  let sydneyTime = moment()
-  .tz ("Australia/Sydney")
-  .format("dddd, MMMM D, YYYY h:m A");
+  let sydneyTime = moment.tz ("Australia/Sydney").format("dddd, MMMM D, YYYY h:m A");
 
 
-      let tokyoElement = document.querySelector("#Asia/Tokyo");
-      tokyoElement.innerHTML=event.target.value;
-      tokyoElement.addEventListener("change", displayDate);
-
-      let parisElement = document.querySelector("#Europe/Paris");
-      parisElement.innerHTML=parisTime;
-
-
-      let sydneyElement = document.querySelector("#Australia/Sydney");
-      sydneyElement.innerHTML=sydneyTime;
-
-
-      let localTimezone = moment.tz.guess();
-      let localElement = document.querySelector("#local");
-      localElement.innerHTML = `Your current time zone is ${localTimezone} and the current time is ${moment().format(
-        "h:m A"
-      )}`;
-
-
-
-    }
+let citySelectElement = document.querySelector("#city");
+citySelectElement.addEventListener("change", showSelectedCity);
+   
 
 
 </script>
