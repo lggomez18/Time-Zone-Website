@@ -7,13 +7,22 @@
     <link rel="stylesheet" href="src/styles.css">
     <script src= "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <title>Time🕛Zone</title>
     <style>
 
     </style>
     
-</head>
+  </head>
 <body>
+  <label class="contrast">
+    <input type="checkbox" >
+    <ion-icon name="moon" class="moon"></ion-icon>
+    <span class="toggle"></span>
+
+  </label>
   <div class="container">
     <h1>World Clock 🕰️</h1>
 
@@ -43,7 +52,7 @@
 <br />
 </div>
 
-<footer>Coded by Leticia Gmx /<a href="https://github.com/lggomez18/Time-Zone-Website">Github open source</a></footer>
+<footer>Coded by Leticia Gmx /<a href="https://github.com/lggomez18/Time-Zone-Website">Github open source</a> Web Accessible</footer>
 </body>
 <script src="src/app.js">
   function showSelectedCity(event) {
