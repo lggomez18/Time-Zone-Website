@@ -5,7 +5,7 @@ if (losAngelesElement) {
 let losAngelesDateElement = document.querySelector (".dateLA");
 let losAngelesTimeElement = document.querySelector (".timeLA");
 let losAngelesTime= moment().tz("America/Los_Angeles");
-losAngelesDateElement.innerHTML = losAngelesTime. format("MMMM Do YYYY");
+losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
 losAngelesTimeElement.innerHTML = 
 losAngelesTime.format(
   "h:mm:ss [<small>]A[</small>]"
@@ -19,7 +19,7 @@ if (parisElement) {
 let parisDateElement = document.querySelector (".dateFR");
 let parisTimeElement = document.querySelector (".timeFR");
 let parisTime= moment().tz("Europe/Paris");
-parisDateElement.innerHTML = parisTime. format("MMMM Do YYYY");
+parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
 parisTimeElement.innerHTML = 
 parisTime.format(
   "h:mm:ss [<small>]A[</small>]"
