@@ -23,3 +23,11 @@ parisTimeElement.innerHTML =
 `${parisTime. format("h:mm:ss")}
 <small>${parisTime.format("A")}</small>`;
 }, 1000);
+
+function updateCity (event){
+    let cityTimeZone = event.time.value;
+    console.log (cityTimeZone);
+}
+
+let citiesSelectElement = document.querySelector ("#city");
+citiesSelectElement.addEventListener("change", updateCity);
