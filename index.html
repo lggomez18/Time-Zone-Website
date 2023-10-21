@@ -13,11 +13,8 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <title>Time🕛Zone</title>
-    <style>
-
-    </style>
-    
-  </head>
+    <link rel="stylesheet" href="css/styles.css" />    
+  </head>s
 <body>
   <button class="contrast">
     <ion-icon name="moon"></ion-icon>
@@ -36,9 +33,9 @@
 <div class="city" id="Paris">
   <div>
   <h2>Paris 🍷</h2>
-  <div class="dateFR"></div>
+  <div class="date"></div>
 </div>
-  <div class="timeFR"><small>AM</small></div>
+  <div class="time"><small>AM</small></div>
 </div>
 <br />
 
@@ -46,9 +43,9 @@
 <div class="city" id="los-angeles">
   <div>
   <h2>Los Angeles 🌭</h2>
-  <div class="dateLA"></div>
+  <div class="date"></div>
 </div>
-  <div class="timeLA"><small></small></div>
+  <div class="time"><small></small></div>
 </div>
 <br />
 </div>
@@ -56,41 +53,5 @@
 
 <footer>Coded by Leticia Gmx /<a href="https://github.com/lggomez18/Time-Zone-Website">Github open source</a> Web Accessible</footer>
 </body>
-<script src="src/app.js">
-  function showSelectedCity(event) {
-    if (event.target.value.length > 0) {
-      let currentTime=moment()
-      .tz (event.target.value)
-      .format("dddd, MMMM D, YYYY h:mm A");
-
-      alert (`It is ${currentTime} in ${event.target.value}`);
-      }
-
-      
-      //if (event.target.value === "Asia/Tokyo") {
-      //alert (`It is ${tokyoTime} in ${event.target.value}`);
-      //}
-
-      //if (event.target.value === "Australia/Sydney") {
-      //alert (`It is ${sydneyTime} in ${event.target.value}`);
-      //}
-    }
-  ;
-
-  
- 
-  let format = "dddd, MMMM D, YYYY h:mm A";
-  let tokyoTime = moment.tz("Asia/Tokyo").format("dddd, MMMM D, YYYY h:m A");
-  
-  let parisTime = moment.tz ("Europe/Paris").format("dddd, MMMM D, YYYY h:m A");
-
-  let sydneyTime = moment.tz ("Australia/Sydney").format("dddd, MMMM D, YYYY h:m A");
-
-
-let citySelectElement = document.querySelector("#city");
-citySelectElement.addEventListener("change", showSelectedCity);
-   
-
-
-</script>
+<script src="src/app.js"></script>
 </html>
