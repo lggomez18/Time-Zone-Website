@@ -30,6 +30,15 @@ function updateCity (event){
     let citiesElement =document.querySelector ("#cities");
     citiesElement.innerHTML=cityTimeZone;
     citiesElement=`
+<div id="cities">
+<div class="city">
+  <div>
+  <h2>${cityTimeZone}</h2>
+  <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+</div>
+  <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format("AM")}</small></div>
+</div>
+<br />
     `
 }
 
