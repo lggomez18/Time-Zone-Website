@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styles.css">
-    <script src= "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
+    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
@@ -17,6 +19,9 @@
     
   </head>
 <body>
+  <button class="contrast">
+    <ion-icon name="moon"></ion-icon>
+  </button>
   <div class="container">
     <h1>World Clock 🕰️</h1>
 
@@ -26,22 +31,22 @@
       <option value="Asia/Tokyo">Tokyo 🍣</option> 
       <option value="Australia/Sydney">Sydney 🦘</option>
     </select>
-<div class="city">
+<div class="city" id="Paris">
   <div>
   <h2>Paris 🍷</h2>
-  <div class="date">August 15th, 2022</div>
+  <div class="dateFR"></div>
 </div>
-  <div class="time">1:48:15 <small>AM</small></div>
+  <div class="timeFR"><small>AM</small></div>
 </div>
 <br />
 
 
-<div class="city">
+<div class="city" id="los-angeles">
   <div>
-  <h2>Tokyo 🍣</h2>
-  <div class="date">August 15th, 2022</div>
+  <h2>Los Angeles 🌭</h2>
+  <div class="dateLA"></div>
 </div>
-  <div class="time">1:48:15 <small>AM</small></div>
+  <div class="timeLA"><small></small></div>
 </div>
 <br />
 </div>

@@ -61,13 +61,22 @@ select{
 
 
 
-.date{
+.dateLA{
     opacity: 0.3;
 }
-.time{
+.timeLA{
     font-size: 40px;
     font-weight: bold;
 }
+
+.dateFR{
+    opacity: 0.3;
+}
+.timeFR{
+    font-size: 40px;
+    font-weight: bold;
+}
+
 select{
     display: block;
     padding: 40px;
