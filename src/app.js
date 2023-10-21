@@ -26,7 +26,11 @@ parisTimeElement.innerHTML =
 
 function updateCity (event){
     let cityTimeZone = event.time.value;
-    console.log (cityTimeZone);
+    let cityTime = moment(). tz(cityTimeZone);
+    let citiesElement =document.querySelector ("#cities");
+    citiesElement.innerHTML=cityTimeZone;
+    citiesElement=`
+    `
 }
 
 let citiesSelectElement = document.querySelector ("#city");
