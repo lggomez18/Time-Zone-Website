@@ -24,6 +24,19 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
+
+  //Guadalajara
+  let guadalajaraElement = document.querySelector("#guadalajara");
+  if (guadalajaraElement) {
+    let guadalajaraDateElement = parisElement.querySelector(".date");
+    let guadalajaraTimeElement = parisElement.querySelector(".time");
+    let guadalajaraTime = moment().tz("America/Mexico");
+
+    guadalajaraDateElement.innerHTML = guadalajaraTime.format("MMMM	Do YYYY");
+    guadalajaraTimeElement.innerHTML = guadalajaraTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
