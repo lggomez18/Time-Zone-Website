@@ -77,9 +77,7 @@ citiesSelectElement.addEventListener("change", updateCity);
 
 //accessibilitycontrast
 function changeContrast(){
-  let body =document.querySelector("body");
-  body.classList.add("dark");
-
+let body =document.querySelector("body");
  body.classList.toggle("dark");
 
 }
