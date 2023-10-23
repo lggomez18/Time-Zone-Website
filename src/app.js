@@ -1,9 +1,15 @@
+
+
+
+
+
+
 function updateTime() {
   // Paris
   let parisElement = document.querySelector("#paris");
   if (parisElement) {
-    let parisDateElement = parisElement.querySelector(".dateFR");
-    let parisTimeElement = parisElement.querySelector(".timeFR");
+    let parisDateElement = parisElement.querySelector(".date");
+    let parisTimeElement = parisElement.querySelector(".time");
     let parisTime = moment().tz("Europe/Paris");
 
     parisDateElement.innerHTML = parisTime.format("MMMM	Do YYYY");
@@ -15,8 +21,8 @@ function updateTime() {
   //Guadalajara
   let guadalajaraElement = document.querySelector("#guadalajara");
   if (guadalajaraElement) {
-    let guadalajaraDateElement = parisElement.querySelector(".dateMX");
-    let guadalajaraTimeElement = parisElement.querySelector(".timeMX");
+    let guadalajaraDateElement = parisElement.querySelector(".date");
+    let guadalajaraTimeElement = parisElement.querySelector(".time");
     let guadalajaraTime = moment().tz("America/Mazatlan");
 
     guadalajaraDateElement.innerHTML = guadalajaraTime.format("MMMM	Do YYYY");
@@ -28,8 +34,8 @@ function updateTime() {
    // Los Angeles
    let losAngelesElement = document.querySelector("#los-angeles");
    if (losAngelesElement) {
-     let losAngelesDateElement = losAngelesElement.querySelector(".dateLA");
-     let lostAngelesTimeElement = losAngelesElement.querySelector(".timeLA");
+     let losAngelesDateElement = losAngelesElement.querySelector(".date");
+     let lostAngelesTimeElement = losAngelesElement.querySelector(".time");
      let losAngelesTime = moment().tz("America/Los_Angeles");
  
      losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM	Do YYYY");
@@ -66,3 +72,17 @@ setInterval(updateTime, 1000);
 
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
+
+
+
+//accessibilitycontrast
+function changeContrast(){
+  let body =document.querySelector("body");
+  body.classList.add("dark");
+
+ body.classList.toggle("dark");
+
+}
+
+let contrastButton = document.querySelector(".contrast");
+contrastButton.addEventListener("click", changeContrast);

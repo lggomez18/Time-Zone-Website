@@ -83,3 +83,28 @@ select{
 
   footer{
 text-align: center;  }
+
+
+/*accessibility*/
+.dark {
+    background:#38598b;
+    color:aliceblue;
+}
+
+.dark .container {
+ background: rgba(162,168,211, 0.4);
+}
+
+.dark a{
+    color: aliceblue;
+
+}
+
+button{
+display: block;
+width:75px;
+height: 25px;
+margin: auto;
+padding: 10 0px;
+}
+
