@@ -1,9 +1,5 @@
 
 
-
-
-
-
 function updateTime() {
   // Paris
   let parisElement = document.querySelector("#paris");
@@ -21,8 +17,8 @@ function updateTime() {
   //Guadalajara
   let guadalajaraElement = document.querySelector("#guadalajara");
   if (guadalajaraElement) {
-    let guadalajaraDateElement = parisElement.querySelector(".date");
-    let guadalajaraTimeElement = parisElement.querySelector(".time");
+    let guadalajaraDateElement = guadalajaraElement.querySelector(".date");
+    let guadalajaraTimeElement = guadalajaraElement.querySelector(".time");
     let guadalajaraTime = moment().tz("America/Mazatlan");
 
     guadalajaraDateElement.innerHTML = guadalajaraTime.format("MMMM	Do YYYY");
@@ -66,6 +62,7 @@ function updateCity(event) {
   <a href="index.html"> ⬅️Return</a>
   `;
 }
+
 
 updateTime();
 setInterval(updateTime, 1000);
